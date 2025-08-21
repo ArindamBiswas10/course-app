@@ -4,12 +4,12 @@ const courseRouter = Router();
 
 
 courseRouter.get('/preview', (req, res)=>{
-    res.send('List of courses');
+    res.json({message: 'List of courses'});
 })
 
 
 courseRouter.post('/purchase', (req, res)=>{
-    res.send('Course purchased');
+    res.json({message: 'Course purchased'});
 })
 
 module.exports = courseRouter;
