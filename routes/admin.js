@@ -9,6 +9,7 @@ admin.post('/signup', (req, res) => {
 admin.post('/signin', (req, res) => {
     res.json({message: 'Admin signed in'});
 });
+
 admin.post('/course', (req, res) => {
     res.json({message: 'Course created by admin'});
 });
