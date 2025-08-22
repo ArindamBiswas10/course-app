@@ -3,7 +3,7 @@ const ObjectId = Schema.Types.ObjectId;
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MongoDB_URI)
+
 
 const userSchema = new Schema({ 
     firstName: String,
