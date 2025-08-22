@@ -14,4 +14,4 @@ userRouter.get('/purchase', (req, res)=>{
     res.json({message: 'Course purchased'});
 })
 
-module.exports = userRouter;
+module.exports = {userRouter:userRouter};

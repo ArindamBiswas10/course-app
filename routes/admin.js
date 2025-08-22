@@ -1,26 +1,26 @@
 const {Router} = require('express');
 const {adminModel} = require('../db');
 
-const admin = Router();
+const adminRouter = Router();
 
-admin.post('/signup', (req, res) => {
+adminRouter.post('/signup', (req, res) => {
     res.json({message: 'Admin signed up'});
 });
 
-admin.post('/signin', (req, res) => {
+adminRouter.post('/signin', (req, res) => {
     res.json({message: 'Admin signed in'});
 });
 
-admin.post('/course', (req, res) => {
+adminRouter.post('/course', (req, res) => {
     res.json({message: 'Course created by admin'});
 });
 
-admin.get('/course/bulk', (req, res) => {
+adminRouter.get('/course/bulk', (req, res) => {
     res.json({message: 'List of courses managed by admin'});
 });
 
-admin.put('/course', (req,res) =>{
+adminRouter.put('/course', (req,res) =>{
     res.json({message: 'Course updated by admin'});
 });
 
-module.exports = admin;
+module.exports = {adminRouter:adminRouter};

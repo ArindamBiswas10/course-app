@@ -1,15 +1,15 @@
 const express = require('express');
-const user = require('./routes/user');
-const course = require('./routes/course');
-const admin = require('./routes/admin');    
-const { default: mongoose } = require('mongoose');
+const {userRouter} = require('./routes/user');
+const {courseRouter} = require('./routes/course');
+const {adminRouter} = require('./routes/admin');    
+const { mongoose } = require('mongoose');
 const app = express();
 
 // Signup, signin, purchase, courses,
 
-app.use('/api/v1/user', user);
-app.use('/api/v1/admin', admin);
-app.use('/api/v1/course', course);
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/admin', adminRouter);
+app.use('/api/v1/course', courseRouter);
 
 async function main(){
    await mongoose.connect(process.env.MongoDB_URI);

@@ -12,4 +12,4 @@ courseRouter.post('/purchase', (req, res)=>{
     res.json({message: 'Course purchased'});
 })
 
-module.exports = courseRouter;
+module.exports = {courseRouter:courseRouter};
